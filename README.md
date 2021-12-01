@@ -1,5 +1,4 @@
 ## 포항사랑상품권 이용정보
-======
 #### 누구에게?  
 >	포항사랑상품권을 사고 / 가맹점에서 이용하고자 하는 소비자  
 #### 왜?  
@@ -12,7 +11,6 @@
 #### 구체적인 필드 이름과 타입(숫자, 글자, 날짜)
 <pre>
 <code>
-{
 	판매점{
 Id (int)
 Name (string) //금융기관명
@@ -20,13 +18,11 @@ Store (string) //판매 및 환전처
 Address (string) //주소
 Latitude (float) //위도
 }
-}
 </code>
 </pre>
 
 <pre>
 <code>
-{
 	가맹점{
 Id(int)
 Name (string) //업체명
@@ -34,7 +30,6 @@ Call (string) //연락처
 Category (string) //업태
 Admin (string) //행정동
 Address (string) //주소
-}
 }
 </code>
 </pre>
