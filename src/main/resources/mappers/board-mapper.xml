@@ -11,7 +11,7 @@
 		</insert>
 		<update id="updateBoard">
 			update BOARD
-			set title=#{title}, content=#{content}, writer=#{writer}}
+			set title=#{title}, writer=#{writer}, content=#{content}
 			where seq=#{seq}
 		</update>
 		<delete id="deleteBoard">
