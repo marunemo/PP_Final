@@ -20,8 +20,15 @@ public class BoardDAO {
 		return sqlSession.selectOne("Board.getBoard", seq);
 	}
 	
-	
 	public List<BoardVO> getBoardList() {
 		return sqlSession.selectList("Board.getBoardList");
+	}
+	
+	public int updateBoard(BoardVO vo) {
+		return sqlSession.update("Board.updateBoard", vo);
+	}
+	
+	public int deleteBoard(int seq) {
+		return sqlSession.delete("Board.deleteBoard", seq);
 	}
 }

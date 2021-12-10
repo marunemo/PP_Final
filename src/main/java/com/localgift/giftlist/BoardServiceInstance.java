@@ -28,13 +28,11 @@ public class BoardServiceInstance implements BoardService{
 
 	@Override
 	public int updateBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		return boardDAO.updateBoard(vo);
 	}
 	
 	@Override
 	public int deleteBoard(int id) {
-		// TODO Auto-generated method stub
-		return 0;
+		return boardDAO.deleteBoard(id);
 	}
 }

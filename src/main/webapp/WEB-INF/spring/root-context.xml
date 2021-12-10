@@ -11,10 +11,10 @@
 		<property name="password" value="eiPhoh2a"/>
 	</bean>
 		
-	<bean id=“sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocation" value="classpath:mybatis-config.xml"/>
-		<property name="mapperLocations"value="classpath:mappers/*-mapper.xml"></property>
+		<property name="mapperLocations" value="classpath:mappers/*-mapper.xml"></property>
 	</bean>
 	
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">

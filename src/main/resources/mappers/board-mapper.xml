@@ -5,13 +5,13 @@
 >
 <mapper namespace="Board">
 		<insert id="insertBoard">
-			insert into BOARD (category, title, writer, content)
+			insert into BOARD (title, writer, content)
 			values
-			(#{category} , #{title} , #{writer} , #{content})
+			(#{title} , #{writer} , #{content})
 		</insert>
 		<update id="updateBoard">
 			update BOARD
-			set title=#{title}, content=#{content}, writer=#{writer}, category=#{category}
+			set title=#{title}, content=#{content}, writer=#{writer}}
 			where seq=#{seq}
 		</update>
 		<delete id="deleteBoard">
