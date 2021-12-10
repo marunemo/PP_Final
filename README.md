@@ -16,8 +16,8 @@ seq (int(11)), auto-increment, KEY //시드
 belong (varchar(30)) //금융기관명
 name (varchar(30)) //판매 및 환전처명
 Address (varchar(100)) //주소
-Latitude (float) //위도
-longitude (float) //경도
+Latitude (varchar(20)) //위도
+longitude (varchar(20)) //경도
 regdate (timestamp) //기준일자
 cnt (int(11))
 }
@@ -33,8 +33,8 @@ callnum (varchar(20)) //연락처
 category (varchar(20)) //업태
 admin (varchar(20)) //행정동
 address (varchar(100)) //주소
-latitude (float) //위도
-longitude (float) //경도
+latitude (varchar(20)) //위도
+longitude (varchar(20)) //경도
 regdate (timestamp) //기준일자
 cnt (int(11))
 }
