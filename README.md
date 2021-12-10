@@ -12,13 +12,14 @@
 <pre>
 <code>
 	STORE{ //판매점
-seq (int), auto-increment //시드
-belong (string) //금융기관명
-name (string) //판매 및 환전처명
-Address (string) //주소
+seq (int(11)), auto-increment, KEY //시드
+belong (varchar(30)) //금융기관명
+name (varchar(30)) //판매 및 환전처명
+Address (varchar(100)) //주소
 Latitude (float) //위도
 longitude (float) //경도
-regdate (float) //기준일자
+regdate (timestamp) //기준일자
+cnt (int(11))
 }
 </code>
 </pre>
@@ -26,15 +27,16 @@ regdate (float) //기준일자
 <pre>
 <code>
 	FRANCHISEE{ //가맹점
-seq (int), auto-increment //시드
-Name (string) //업체명
-Call (string) //연락처
-Category (string) //업태
-Admin (string) //행정동
-Address (string) //주소
+seq (int(11)), auto-increment, KEY //시드
+Name (varchar(30)) //업체명
+Call (varchar(20)) //연락처
+Category (varchar(20)) //업태
+Admin (varchar(20)) //행정동
+Address (varchar(100)) //주소
 Latitude (float) //위도
 longitude (float) //경도
-regdate (float) //기준일자
+regdate (timestamp) //기준일자
+cnt (int(11))
 }
 </code>
 </pre>
