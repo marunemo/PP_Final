@@ -11,25 +11,30 @@
 #### 구체적인 필드 이름과 타입(숫자, 글자, 날짜)
 <pre>
 <code>
-	판매점{
-Id (int)
-Name (string) //금융기관명
-Store (string) //판매 및 환전처
+	STORE{ //판매점
+seq (int), auto-increment //시드
+belong (string) //금융기관명
+name (string) //판매 및 환전처명
 Address (string) //주소
 Latitude (float) //위도
+longitude (float) //경도
+regdate (float) //기준일자
 }
 </code>
 </pre>
 
 <pre>
 <code>
-	가맹점{
-Id(int)
+	FRANCHISEE{ //가맹점
+seq (int), auto-increment //시드
 Name (string) //업체명
 Call (string) //연락처
 Category (string) //업태
 Admin (string) //행정동
 Address (string) //주소
+Latitude (float) //위도
+longitude (float) //경도
+regdate (float) //기준일자
 }
 </code>
 </pre>
