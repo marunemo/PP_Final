@@ -11,25 +11,32 @@
 #### 구체적인 필드 이름과 타입(숫자, 글자, 날짜)
 <pre>
 <code>
-	판매점{
-Id (int)
-Name (string) //금융기관명
-Store (string) //판매 및 환전처
-Address (string) //주소
-Latitude (float) //위도
+	STORE{ //판매점
+seq (int(11)), auto-increment, KEY //시드
+belong (varchar(30)) //금융기관명
+name (varchar(30)) //판매 및 환전처명
+Address (varchar(100)) //주소
+Latitude (varchar(20)) //위도
+longitude (varchar(20)) //경도
+regdate (timestamp) //기준일자
+cnt (int(11))
 }
 </code>
 </pre>
 
 <pre>
 <code>
-	가맹점{
-Id(int)
-Name (string) //업체명
-Call (string) //연락처
-Category (string) //업태
-Admin (string) //행정동
-Address (string) //주소
+	FRANCHISEE{ //가맹점
+seq (int(11)), auto-increment, KEY //시드
+name (varchar(30)) //업체명
+callnum (varchar(20)) //연락처
+category (varchar(20)) //업태
+admin (varchar(20)) //행정동
+address (varchar(100)) //주소
+latitude (varchar(20)) //위도
+longitude (varchar(20)) //경도
+regdate (timestamp) //기준일자
+cnt (int(11))
 }
 </code>
 </pre>
