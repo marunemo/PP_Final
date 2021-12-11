@@ -26,7 +26,7 @@
 	<beans:bean id="LoginCheckInterceptor" class="com.localgift.user.LoginCheckInterceptor">
 	</beans:bean>
 	
-	<context:component-scan base-package="com.localgift.giftlist" />
+	<context:component-scan base-package="com.localgift.*" />
 	
 	<interceptors>
 		<interceptor>

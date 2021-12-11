@@ -1,4 +1,4 @@
-package com.localgift;
+package com.localgift.common;
 
 import java.text.DateFormat;
 import java.util.Date;
