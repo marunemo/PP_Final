@@ -36,6 +36,7 @@
 </head>
 <body>
 <h1>판매점 정보입니다.</h1>
+<a href="../login/logout">logout</a>
 <table id="list" width="90%">
 <tr>
 	<th>Id</th>

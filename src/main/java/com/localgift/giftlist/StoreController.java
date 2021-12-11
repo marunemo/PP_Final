@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class StoreController {
 	
 	@Autowired
-	StoreServiceInstance storeService;
+	StoreServiceImpl storeService;
 	
 	@RequestMapping(value = "/store/list", method = RequestMethod.GET)
 	public String storelist(Model model) {
