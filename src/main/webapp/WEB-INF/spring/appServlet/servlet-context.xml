@@ -23,6 +23,14 @@
 	
 	<context:component-scan base-package="com.localgift.giftlist" />
 	
-	
+	<interceptors>
+		<interceptor>
+			<mapping path="/**"/>
+			<exclude-mapping path="/resources/**"/>
+			<exclude-mapping path="/img/**"/>
+			<exclude-mapping path="/login/*"/>
+			<beans:ref bean="LoginCheckInterceptor"/>
+		</interceptor>
+	</interceptors>
 	
 </beans:beans>
