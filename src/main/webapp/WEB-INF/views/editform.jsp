@@ -203,12 +203,12 @@
                             </div>
 
                             <div class="col-md-12">
-                                <input class="form-control" type="text" name="latitude" placeholder="위도" <%= u.getLatitude() %> required>
+                                <input class="form-control" type="text" name="latitude" placeholder="위도" value="<%= u.getLatitude() %>" required>
                                 <div class="invalid-feedback">위도가 입력되지 않았습니다!</div>
                             </div>
 
                             <div class="col-md-12">
-                                <input class="form-control" type="text" name="longitude" placeholder="경도" <%= u.getLongitude() %> required>
+                                <input class="form-control" type="text" name="longitude" placeholder="경도" value="<%= u.getLongitude() %>" required>
                                 <div class="invalid-feedback">경도가 입력되지 않았습니다!</div>
                             </div>
 
