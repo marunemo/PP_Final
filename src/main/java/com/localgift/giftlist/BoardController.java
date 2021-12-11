@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class BoardController {
 	
 	@Autowired
-	BoardServiceInstance boardService;
+	BoardServiceImpl boardService;
 	
 	@RequestMapping(value = "/board/list", method = RequestMethod.GET)
 	public String boardlist(Model model) {

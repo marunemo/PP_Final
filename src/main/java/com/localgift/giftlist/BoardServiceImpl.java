@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BoardServiceInstance implements BoardService{
+public class BoardServiceImpl implements BoardService{
 	
 	@Autowired
 	BoardDAO boardDAO;
