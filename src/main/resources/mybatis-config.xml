@@ -6,5 +6,6 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="board" type="com.localgift.giftlist.BoardVO"/>
+		<typeAlias alias="user" type="com.localgift.user.UserVO"/>
 	</typeAliases>
 </configuration>
