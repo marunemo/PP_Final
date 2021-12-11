@@ -21,7 +21,7 @@ public class StoreController {
 	
 	@RequestMapping(value = "/store/add", method = RequestMethod.GET)
 	public String addPost() {
-		return "addpostform";
+		return "addform";
 	}
 	
 	@RequestMapping(value = "/store/addok", method = RequestMethod.POST)
