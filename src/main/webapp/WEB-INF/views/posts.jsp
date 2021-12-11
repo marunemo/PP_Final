@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>free board</title>
+<title>store</title>
 <style>
 #list {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -35,23 +35,27 @@
 </script>
 </head>
 <body>
-<h1>자유게시판</h1>
+<h1>판매점 정보입니다.</h1>
 <table id="list" width="90%">
 <tr>
 	<th>Id</th>
-	<th>Title</th>
-	<th>Writer</th>
-	<th>Content</th>
-	<th>Regdate</th>
-	<th>Edit</th>
-	<th>Delete</th>
+	<th>금융기관</th>
+	<th>판매 및 환전처명</th>
+	<th>주소</th>
+	<th>위도</th>
+	<th>경도</th>
+	<th>생성날짜</th>
+	<th>수정</th>
+	<th>삭제</th>
 </tr>
 <c:forEach items="${list}" var="u">
 	<tr>
 		<td>${u.getSeq()}</td>
-		<td>${u.getTitle()}</td>
-		<td>${u.getWriter()}</td>
-		<td>${u.getContent()}</td>
+		<td>${u.getBelong()}</td>
+		<td>${u.getName()}</td>
+		<td>${u.getAddress()}</td>
+		<td>${u.getLatitude()}</td>
+		<td>${u.getLongitude()}</td>
 		<td>${u.getRegdate()}</td>
 		<td><a href="editpost/${u.getSeq()}">Edit</a></td>
 		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
