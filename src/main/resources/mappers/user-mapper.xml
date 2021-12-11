@@ -5,7 +5,7 @@
 >
 <mapper namespace="User">
 	<select id="getUser" resultType="user">
-		select userid, username, from loginUser
+		select userid, username from loginUser
 		where userid=#{userid} and password=#{password}
 	</select>
 </mapper>
