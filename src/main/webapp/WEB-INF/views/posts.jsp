@@ -332,7 +332,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="primary-btn text-center">
+                        <div class="primary-btn text-center mb-3">
                             <a href="add" class="btn btn-primary">새 금융기관 등록하기</a>
                         </div>
                     </div>
