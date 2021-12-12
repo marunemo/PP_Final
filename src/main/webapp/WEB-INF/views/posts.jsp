@@ -79,7 +79,7 @@
 
         .event-store-area .tab-area .tab-content .table tbody th span,
         .event-store-area .tab-area .tab-content .table tbody td span {
-            color: #4125dd;
+            color: #152733;
             font-size: 18px;
             text-transform: uppercase;
             margin-bottom: 6px;
@@ -100,50 +100,6 @@
             font-weight: normal;
         }
 
-        .event-store-area-two ul.custom-tab {
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            border-bottom: 1px solid #dee2e6;
-            margin-bottom: 30px;
-        }
-
-        .event-store-area-two ul.custom-tab li {
-            margin-right: 70px;
-            position: relative;
-        }
-
-        .event-store-area-two ul.custom-tab li a {
-            color: #252525;
-            font-size: 25px;
-            line-height: 25px;
-            font-weight: 600;
-            text-transform: capitalize;
-            padding: 35px 0;
-            position: relative;
-        }
-
-        .event-store-area-two ul.custom-tab li a:hover:before {
-            width: 100%;
-        }
-
-        .event-store-area-two ul.custom-tab li a:before {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            content: "";
-            background: #4125dd;
-            width: 0;
-            height: 2px;
-            -webkit-transition: all 0.4s;
-            -o-transition: all 0.4s;
-            transition: all 0.4s;
-        }
-
-        .event-store-area-two ul.custom-tab li a.active {
-            color: #4125dd;
-        }
-
         .event-store-area-two .primary-btn {
             margin-top: 40px;
         }
@@ -153,9 +109,16 @@
             box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
             margin-bottom: 0;
         }
+        
+        /* .inner-box .btn-layout .primary-btn .btn-primary {
+            background-color: #152733;
+            border: 1px solid #b7b7b7;
+            color: #fff;
+            font-size: 16px;
+        } */
 
         .event-store-area-two .tab-content .table thead {
-            background-color: #007bff;
+            background-color: #152733;
             color: #fff;
             font-size: 20px;
         }
@@ -196,7 +159,7 @@
         }
         
         .event-store-area-two .tab-content .table tbody tr td.btn-layout {
-            padding: 30px 0px;
+            padding: 30px 5	px;
             vertical-align: middle;
         }
 
@@ -251,7 +214,7 @@
         <div>
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
 		    <div class="container">
-		      <h2 class="navbar-brand">판매점 정보</h2>
+		      <h2 class="navbar-brand  mb-lg-0">판매점 정보</h2>
 		      <div class="collapse navbar-collapse" id="navbarsExample07">
 		        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		          <li class="nav-item">
@@ -272,7 +235,6 @@
 		  </nav>
             <div class="row">
                 <div class="col-lg-12">
-                    <hr>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade active show" id="home" role="tabpanel">
                             <div class="table-responsive">
@@ -316,12 +278,12 @@
                                                 </td>
                                                 <td class="btn-layout">
                                                     <div class="primary-btn">
-                                                        <a class="btn btn-primary" href="editpost/${u.getSeq()}">수정하기</a>
+                                                        <a class="btn btn-dark" href="editpost/${u.getSeq()}">수정하기</a>
                                                     </div>
                                                 </td>
                                                 <td class="btn-layout">
                                                     <div class="primary-btn">
-                                                        <a class="btn btn-primary"
+                                                        <a class="btn btn-dark"
                                                             href="javascript:delete_ok('${u.getSeq()}')">삭제하기</a>
                                                     </div>
                                                 </td>
@@ -332,7 +294,7 @@
                             </div>
                         </div>
                         <div class="primary-btn text-center mb-3">
-                            <a href="add" class="btn btn-primary">새 금융기관 등록하기</a>
+                            <a href="add" class="btn btn-dark">새 금융기관 등록하기</a>
                         </div>
                     </div>
                 </div>
