@@ -206,13 +206,18 @@
             padding: 30px 20px;
             vertical-align: middle;
         }
+        
+        .event-store-area-two .tab-content .table tbody tr td.btn-layout {
+            padding: 30px 0px;
+            vertical-align: middle;
+        }
 
         .event-store-area-two .tab-content .table tbody tr td .r-no span {
             color: #252525;
         }
 
-        .event-store-area-two .tab-content .table tbody tr td .event-wrap h3 a {
-            font-size: 20px;
+        .event-store-area-two .tab-content .table tbody tr td .event-wrap h3 p {
+            font-size: 22px;
             line-height: 20px;
             color: #cf057c;
             -webkit-transition: all 0.4s;
@@ -220,58 +225,22 @@
             transition: all 0.4s;
         }
 
-        .event-store-area-two .tab-content .table tbody tr td .event-wrap h3 a:hover {
+        .event-store-area-two .tab-content .table tbody tr td .event-wrap h3 p:hover {
             color: #4125dd;
         }
 
-        .event-store-area-two .tab-content .table tbody tr td .event-wrap .categories {
-            display: -webkit-inline-box;
-            display: -ms-inline-flexbox;
-            display: inline-flex;
-            margin: 10px 0;
-        }
-
-        .event-store-area-two .tab-content .table tbody tr td .event-wrap .categories a {
+        .event-store-area-two .tab-content .table tbody tr td .event-wrap .meta p {
             color: #252525;
             font-size: 16px;
+            line-height: 18px;
             margin-left: 10px;
             -webkit-transition: all 0.4s;
             -o-transition: all 0.4s;
             transition: all 0.4s;
         }
 
-        .event-store-area-two .tab-content .table tbody tr td .event-wrap .categories a:before {
-            content: "\f07b";
-            font-family: fontawesome;
-            padding-right: 5px;
-        }
-
-        .event-store-area-two .tab-content .table tbody tr td .event-wrap .time span {
-            color: #252525;
-        }
-
-        .event-store-area-two .tab-content .table tbody tr td .event-wrap .organizers {
-            display: -webkit-inline-box;
-            display: -ms-inline-flexbox;
-            display: inline-flex;
-            margin: 10px 0;
-        }
-
-        .event-store-area-two .tab-content .table tbody tr td .event-wrap .organizers a {
-            color: #4125dd;
-            font-size: 16px;
-            -webkit-transition: all 0.4s;
-            -o-transition: all 0.4s;
-            transition: all 0.4s;
-        }
-
-        .event-store-area-two .tab-content .table tbody tr td .event-wrap .organizers a:hover {
-            color: #4125dd;
-        }
-
-        .event-store-area-two .tab-content .table tbody tr td .event-wrap .organizers a:before {
-            content: "\f007";
-            font-family: fontawesome;
+        .event-store-area-two .tab-content .table tbody tr td .event-wrap .meta p:before {
+            content: " ";
             padding-right: 5px;
         }
 
@@ -312,9 +281,9 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center" scope="col">Id</th>
-                                            <th scope="col">금융기관</th>
-                                            <th scope="col">금융기관</th>
-                                            <th scope="col">수정일</th>
+                                            <th class="text-center" scope="col">금융기관</th>
+                                            <th class="text-center" scope="col">금융기관</th>
+                                            <th class="text-center" scope="col">수정일</th>
                                             <th class="text-center" scope="col" colspan="2">수정 및 삭제</th>
                                         </tr>
                                     </thead>
@@ -335,27 +304,26 @@
                                                 </td>
                                                 <td>
                                                     <div class="event-wrap">
-                                                        <h3><a href="#">${u.getBelong()}</a></h3>
+                                                        <h3><p>${u.getBelong()}</p></h3>
                                                         <div class="meta">
-                                                            <a href="#">${u.getName()}</a>
-                                                            <a href="#">${u.getAddress()}</a>
-                                                            <span>${u.getLatitude()}, ${u.getLongitude()}</span>
+                                                            <p>${u.getName()}</p>
+                                                            <p>${u.getAddress()}</p>
+                                                            <p>${u.getLatitude()}, ${u.getLongitude()}</p>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="r-no"><span>${u.getRegdate()}</span></div>
                                                 </td>
-                                                <td>
+                                                <td class="btn-layout">
                                                     <div class="primary-btn">
-                                                        <a class="btn btn-primary" href="editpost/${u.getSeq()}">Read
-                                                            More</a>
+                                                        <a class="btn btn-primary" href="editpost/${u.getSeq()}">수정하기</a>
                                                     </div>
                                                 </td>
-                                                <td>
+                                                <td class="btn-layout">
                                                     <div class="primary-btn">
                                                         <a class="btn btn-primary"
-                                                            href="javascript:delete_ok('${u.getSeq()}')">Read More</a>
+                                                            href="javascript:delete_ok('${u.getSeq()}')">삭제하기</a>
                                                     </div>
                                                 </td>
                                             </tr>
