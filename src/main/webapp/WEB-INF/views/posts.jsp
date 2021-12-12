@@ -12,14 +12,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- ref: https://www.bootdey.com/snippets/view/Event-Schedule-list -->
     <style>
-        body {
-            margin-top: 20px;
-        }
-
-        .event-store-area .section-title .title-text {
-            margin-bottom: 50px;
-        }
-
         .event-store-area .tab-area .nav-tabs {
             border-bottom: inherit;
         }
@@ -87,7 +79,7 @@
 
         .event-store-area .tab-area .tab-content .table tbody th span,
         .event-store-area .tab-area .tab-content .table tbody td span {
-            color: #4125dd;
+            color: #152733;
             font-size: 18px;
             text-transform: uppercase;
             margin-bottom: 6px;
@@ -108,54 +100,6 @@
             font-weight: normal;
         }
 
-        .event-store-area-two .section-title .title-text h2 {
-            margin: 0px 0 15px;
-        }
-
-        .event-store-area-two ul.custom-tab {
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            border-bottom: 1px solid #dee2e6;
-            margin-bottom: 30px;
-        }
-
-        .event-store-area-two ul.custom-tab li {
-            margin-right: 70px;
-            position: relative;
-        }
-
-        .event-store-area-two ul.custom-tab li a {
-            color: #252525;
-            font-size: 25px;
-            line-height: 25px;
-            font-weight: 600;
-            text-transform: capitalize;
-            padding: 35px 0;
-            position: relative;
-        }
-
-        .event-store-area-two ul.custom-tab li a:hover:before {
-            width: 100%;
-        }
-
-        .event-store-area-two ul.custom-tab li a:before {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            content: "";
-            background: #4125dd;
-            width: 0;
-            height: 2px;
-            -webkit-transition: all 0.4s;
-            -o-transition: all 0.4s;
-            transition: all 0.4s;
-        }
-
-        .event-store-area-two ul.custom-tab li a.active {
-            color: #4125dd;
-        }
-
         .event-store-area-two .primary-btn {
             margin-top: 40px;
         }
@@ -165,9 +109,16 @@
             box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
             margin-bottom: 0;
         }
+        
+        /* .inner-box .btn-layout .primary-btn .btn-primary {
+            background-color: #152733;
+            border: 1px solid #b7b7b7;
+            color: #fff;
+            font-size: 16px;
+        } */
 
         .event-store-area-two .tab-content .table thead {
-            background-color: #007bff;
+            background-color: #152733;
             color: #fff;
             font-size: 20px;
         }
@@ -208,7 +159,7 @@
         }
         
         .event-store-area-two .tab-content .table tbody tr td.btn-layout {
-            padding: 30px 0px;
+            padding: 30px 5	px;
             vertical-align: middle;
         }
 
@@ -258,22 +209,32 @@
 </head>
 
 <body>
-    <div class="event-store-area-two bg-color pad100">
-        <div class="container">
+    <div class="event-store-area-two bg-color">
+        <!-- <div class="container"> -->
+        <div>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+		    <div class="container">
+		      <h2 class="navbar-brand  mb-lg-0">판매점 정보</h2>
+		      <div class="collapse navbar-collapse" id="navbarsExample07">
+		        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		          <li class="nav-item">
+		            <a class="nav-link active" aria-current="page" href="#">홈</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">넘어가기</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="../login/logout">로그아웃</a>
+		          </li>
+		        </ul>
+		        <form>
+		          <input class="form-control me-2" type="text" placeholder="도로명 주소로 검색해보세요" aria-label="Search">
+	          	</form>
+		      </div>
+		    </div>
+		  </nav>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-title text-center">
-                        <div class="title-text">
-                            <h2>판매점 정보입니다</h2>
-                        </div>
-                        <p>도로명 주소로 검색해보세요.</p>
-                        <a href="../login/logout">logout</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <hr>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade active show" id="home" role="tabpanel">
                             <div class="table-responsive">
@@ -317,12 +278,12 @@
                                                 </td>
                                                 <td class="btn-layout">
                                                     <div class="primary-btn">
-                                                        <a class="btn btn-primary" href="editpost/${u.getSeq()}">수정하기</a>
+                                                        <a class="btn btn-dark" href="editpost/${u.getSeq()}">수정하기</a>
                                                     </div>
                                                 </td>
                                                 <td class="btn-layout">
                                                     <div class="primary-btn">
-                                                        <a class="btn btn-primary"
+                                                        <a class="btn btn-dark"
                                                             href="javascript:delete_ok('${u.getSeq()}')">삭제하기</a>
                                                     </div>
                                                 </td>
@@ -333,13 +294,21 @@
                             </div>
                         </div>
                         <div class="primary-btn text-center mb-3">
-                            <a href="add" class="btn btn-primary">새 금융기관 등록하기</a>
+                            <a href="add" class="btn btn-dark">새 금융기관 등록하기</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <footer>
+      <ul class="nav justify-content-center border-bottom pb-3 mt-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="https://github.com/alsco1234/PP_Final" class="nav-link px-2 text-muted">Github</a></li>
+        <li class="nav-item"><a href="../login/logout" class="nav-link px-2 text-muted">Logout</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2021 실전프로젝트1 기말 과제</p>
+    </footer>
     <script>
         function delete_ok(id) {
             var a = confirm("정말로 삭제하겠습니까?");
