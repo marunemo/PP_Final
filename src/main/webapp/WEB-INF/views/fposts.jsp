@@ -270,8 +270,8 @@
                                                     <div class="event-wrap">
                                                         <h3><p>${u.getName()}</p></h3>
                                                         <div class="meta">
-                                                            <%-- <p>${u.getCallnum()}, ${u.getCategory()}</p>
-                                                            <p>${u.getAdmin()}, ${u.getAddress()}</p> --%>
+                                                            <p>${u.getCallnum()}, ${u.getCategory()}</p>
+                                                            <p>${u.getAdmin()}, ${u.getAddress()}</p> 
                                                             <p>${u.getLatitude()}, ${u.getLongitude()}</p>
                                                         </div>
                                                     </div>
