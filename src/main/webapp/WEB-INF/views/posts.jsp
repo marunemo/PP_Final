@@ -301,6 +301,14 @@
             </div>
         </div>
     </div>
+    <footer>
+      <ul class="nav justify-content-center border-bottom pb-3 mt-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="https://github.com/alsco1234/PP_Final" class="nav-link px-2 text-muted">Github</a></li>
+        <li class="nav-item"><a href="../login/logout" class="nav-link px-2 text-muted">Logout</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2021 실전프로젝트1 기말 과제</p>
+    </footer>
     <script>
         function delete_ok(id) {
             var a = confirm("정말로 삭제하겠습니까?");
