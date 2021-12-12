@@ -12,14 +12,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- ref: https://www.bootdey.com/snippets/view/Event-Schedule-list -->
     <style>
-        body {
-            margin-top: 20px;
-        }
-
-        .event-store-area .section-title .title-text {
-            margin-bottom: 50px;
-        }
-
         .event-store-area .tab-area .nav-tabs {
             border-bottom: inherit;
         }
@@ -106,10 +98,6 @@
             font-size: 14px;
             margin: 0;
             font-weight: normal;
-        }
-
-        .event-store-area-two .section-title .title-text h2 {
-            margin: 0px 0 15px;
         }
 
         .event-store-area-two ul.custom-tab {
@@ -258,19 +246,30 @@
 </head>
 
 <body>
-    <div class="event-store-area-two bg-color pad100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title text-center">
-                        <div class="title-text">
-                            <h2>판매점 정보입니다</h2>
-                        </div>
-                        <p>도로명 주소로 검색해보세요.</p>
-                        <a href="../login/logout">logout</a>
-                    </div>
-                </div>
-            </div>
+    <div class="event-store-area-two bg-color">
+        <!-- <div class="container"> -->
+        <div>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+		    <div class="container">
+		      <h2 class="navbar-brand">판매점 정보</h2>
+		      <div class="collapse navbar-collapse" id="navbarsExample07">
+		        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		          <li class="nav-item">
+		            <a class="nav-link active" aria-current="page" href="#">홈</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">넘어가기</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="../login/logout">로그아웃</a>
+		          </li>
+		        </ul>
+		        <form>
+		          <input class="form-control me-2" type="text" placeholder="도로명 주소로 검색해보세요" aria-label="Search">
+	          	</form>
+		      </div>
+		    </div>
+		  </nav>
             <div class="row">
                 <div class="col-lg-12">
                     <hr>
