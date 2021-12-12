@@ -221,6 +221,9 @@
 		            <a class="nav-link active" aria-current="page" href="#">홈</a>
 		          </li>
 		          <li class="nav-item">
+		            <a class="nav-link" href="../franchisee/list">가맹점</a>
+		          </li>
+		          <li class="nav-item">
 		            <a class="nav-link" href="#">넘어가기</a>
 		          </li>
 		          <li class="nav-item">
