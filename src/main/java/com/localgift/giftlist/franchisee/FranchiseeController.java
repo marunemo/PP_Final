@@ -1,4 +1,4 @@
-package com.localgift.giftlist;
+package com.localgift.giftlist.franchisee;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

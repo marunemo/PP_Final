@@ -1,4 +1,4 @@
-package com.localgift.giftlist;
+package com.localgift.giftlist.store;
 
 import java.util.Date;
 
