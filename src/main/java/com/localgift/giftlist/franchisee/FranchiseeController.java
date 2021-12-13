@@ -16,12 +16,12 @@ public class FranchiseeController {
 	@RequestMapping(value = "/franchisee/list", method = RequestMethod.GET)
 	public String franchiseelist(Model model) {
 		model.addAttribute("list", franchiseeService.getFranchiseeList());
-		return "fposts";
+		return "franchisee/posts";
 	}
 	
 	@RequestMapping(value = "/franchisee/add", method = RequestMethod.GET)
 	public String addPost() {
-		return "faddform";
+		return "franchisee/addform";
 	}
 	
 	@RequestMapping(value = "/franchisee/addok", method = RequestMethod.POST)
@@ -30,14 +30,14 @@ public class FranchiseeController {
 			System.out.println("[오류] 데이터 추가 실패");
 		else
 			System.out.println("데이터 추가 성공!");
-		return "redirect:list";
+		return "redirect:/franchisee/list";
 	}
 	
 	@RequestMapping(value = "/franchisee/editpost/{id}", method = RequestMethod.GET)
 	public String editPost(@PathVariable("id") int id, Model model) {
 		FranchiseeVO franchiseeVO = franchiseeService.getFranchisee(id);
 		model.addAttribute("franchiseeVO", franchiseeVO);
-		return "feditform";
+		return "franchisee/editform";
 	}
 	
 	@RequestMapping(value = "/franchisee/editok", method = RequestMethod.POST)

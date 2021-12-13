@@ -16,12 +16,12 @@ public class StoreController {
 	@RequestMapping(value = "/store/list", method = RequestMethod.GET)
 	public String storelist(Model model) {
 		model.addAttribute("list", storeService.getStoreList());
-		return "posts";
+		return "store/posts";
 	}
 	
 	@RequestMapping(value = "/store/add", method = RequestMethod.GET)
 	public String addPost() {
-		return "addform";
+		return "store/addform";
 	}
 	
 	@RequestMapping(value = "/store/addok", method = RequestMethod.POST)
@@ -30,14 +30,14 @@ public class StoreController {
 			System.out.println("[오류] 데이터 추가 실패");
 		else
 			System.out.println("데이터 추가 성공!");
-		return "redirect:list";
+		return "redirect:/store/list";
 	}
 	
 	@RequestMapping(value = "/store/editpost/{id}", method = RequestMethod.GET)
 	public String editPost(@PathVariable("id") int id, Model model) {
 		StoreVO storeVO = storeService.getStore(id);
 		model.addAttribute("storeVO", storeVO);
-		return "editform";
+		return "store/editform";
 	}
 	
 	@RequestMapping(value = "/store/editok", method = RequestMethod.POST)
