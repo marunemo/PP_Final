@@ -224,13 +224,10 @@
 		            <a class="nav-link" href="../store/list">판매점</a>
 		          </li>
 		          <li class="nav-item">
-		            <a class="nav-link" href="#">넘어가기</a>
-		          </li>
-		          <li class="nav-item">
 		            <a class="nav-link" href="../login/logout">로그아웃</a>
 		          </li>
 		        </ul>
-		        <form>
+		        <form class="w-25">
 		          <input class="form-control me-2" type="text" placeholder="도로명 주소로 검색해보세요" aria-label="Search">
 	          	</form>
 		      </div>
