@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>판매점 정보</title>
+    <title>가맹점 정보</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -214,14 +214,14 @@
         <div>
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
 		    <div class="container">
-		      <h2 class="navbar-brand  mb-lg-0">판매점 정보</h2>
+		      <h2 class="navbar-brand  mb-lg-0">가맹점 정보</h2>
 		      <div class="collapse navbar-collapse" id="navbarsExample07">
 		        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		          <li class="nav-item">
 		            <a class="nav-link active" aria-current="page" href="#">홈</a>
 		          </li>
 		          <li class="nav-item">
-		            <a class="nav-link" href="../franchisee/list">가맹점</a>
+		            <a class="nav-link" href="../store/list">판매점</a>
 		          </li>
 		          <li class="nav-item">
 		            <a class="nav-link" href="#">넘어가기</a>
@@ -245,8 +245,8 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center" scope="col">Id</th>
-                                            <th class="text-center" scope="col">금융기관</th>
-                                            <th class="text-center" scope="col">금융기관</th>
+                                            <th class="text-center" scope="col">가맹점</th>
+                                            <th class="text-center" scope="col">가맹점</th>
                                             <th class="text-center" scope="col">수정일</th>
                                             <th class="text-center" scope="col" colspan="2">수정 및 삭제</th>
                                         </tr>
@@ -257,7 +257,7 @@
                                                 <th scope="row">
                                                     <div class="event-date">
                                                         <span>${u.getSeq()}</span>
-                                                        <p>판매점</p>
+                                                        <p>가맹점</p>
                                                     </div>
                                                 </th>
                                                 <td>
@@ -268,10 +268,10 @@
                                                 </td>
                                                 <td>
                                                     <div class="event-wrap">
-                                                        <h3><p>${u.getBelong()}</p></h3>
+                                                        <h3><p>${u.getName()}</p></h3>
                                                         <div class="meta">
-                                                            <p>${u.getName()}</p>
-                                                            <p>${u.getAddress()}</p>
+                                                            <p>${u.getCallnum()}, ${u.getCategory()}</p>
+                                                            <p>${u.getAdmin()}, ${u.getAddress()}</p> 
                                                             <p>${u.getLatitude()}, ${u.getLongitude()}</p>
                                                         </div>
                                                     </div>
@@ -297,7 +297,7 @@
                             </div>
                         </div>
                         <div class="primary-btn text-center mb-3">
-                            <a href="add" class="btn btn-dark">새 금융기관 등록하기</a>
+                            <a href="add" class="btn btn-dark">새 가맹점 등록하기</a>
                         </div>
                     </div>
                 </div>

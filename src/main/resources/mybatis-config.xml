@@ -6,6 +6,7 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="store" type="com.localgift.giftlist.StoreVO"/>
+		<typeAlias alias="franchisee" type="com.localgift.giftlist.FranchiseeVO"/>
 		<typeAlias alias="user" type="com.localgift.user.UserVO"/>
 	</typeAliases>
 </configuration>
