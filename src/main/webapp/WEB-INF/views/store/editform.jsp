@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@page import="com.localgift.giftlist.StoreVO" %>
+ <%@page import="com.localgift.giftlist.store.StoreVO" %>
 <!DOCTYPE html>
 <html>
 <head>
