@@ -24,6 +24,13 @@
 			select * from STORE order by seq desc
 		</select>
 		<select id="searchStoreList" resultType="store">
-			select * from STORE where #{column} LIKE #{keyword} order by seq desc
+			select * from STORE
+			<where>
+				<if test='column == "belong"'>belong</if>
+				<if test='column == "name"'>name</if>
+				<if test='column == "address"'>address</if>
+				LIKE #{keyword}
+			</where>
+			order by seq desc
 		</select>
 </mapper>
