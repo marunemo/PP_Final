@@ -182,7 +182,7 @@
                         <form action="addok" method="post" class="requires-validation" novalidate>
 
                             <div class="col-md-12">
-                                <input class="form-control" type="text" name="belong" placeholder="업체명" required>
+                                <input class="form-control" type="text" name="name" placeholder="업체명" required>
                                 <div class="invalid-feedback">가맹점 이름이 입력되지 않았습니다!</div>
                             </div>
 
