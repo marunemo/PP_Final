@@ -223,6 +223,7 @@
                             </div>
 
                             <div class="form-button mt-3">
+                            	<button id="reset" type="reset" >초기화</button>
                                 <button id="submit" type="submit" class="btn btn-primary">수정하기</button>
                                 <button type="button" onclick="history.back()" class="btn btn-primary">취소</button>
                             </div>

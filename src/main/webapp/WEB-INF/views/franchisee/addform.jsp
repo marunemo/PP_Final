@@ -215,7 +215,7 @@
                                 <input class="form-control" type="text" name="longitude" placeholder="경도" required>
                                 <div class="invalid-feedback">경도가 입력되지 않았습니다!</div>
                             </div>
-
+                            <br>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                                 <label class="form-check-label">본 정보를 제공하는 데에 동의합니다.</label>
@@ -223,6 +223,7 @@
                             </div>
 
                             <div class="form-button mt-3">
+                            	<button id="reset" type="reset" >초기화</button>
                                 <button id="submit" type="submit" class="btn btn-primary">등록하기</button>
                                 <a href="list">리스트로 돌아가기</a>
                             </div>
