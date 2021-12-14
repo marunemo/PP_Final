@@ -227,8 +227,19 @@
 		            <a class="nav-link" href="../login/logout">로그아웃</a>
 		          </li>
 		        </ul>
-		        <form class="w-25">
-		          <input class="form-control me-2" type="text" placeholder="도로명 주소로 검색해보세요" aria-label="Search">
+		        <form class="input-group w-50">
+	        	  <div class="input-group-prepend">
+				    <select class="form-select">
+				      <option selected>Choose...</option>
+				      <option value="1">One</option>
+				      <option value="2">Two</option>
+				      <option value="3">Three</option>
+				    </select>
+				  </div>
+		          <input class="form-control" type="text" placeholder="도로명 주소로 검색해보세요" aria-label="Search">
+		          <div class="input-group-append">
+				    <button class="btn btn-outline-secondary" type="submit">검색</button>
+				  </div>
 	          	</form>
 		      </div>
 		    </div>
