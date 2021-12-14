@@ -229,16 +229,16 @@
 		        </ul>
 		        <form class="input-group w-50">
 	        	  <div class="input-group-prepend">
-				    <select class="form-select">
-				      <option selected>Choose...</option>
-				      <option value="1">One</option>
-				      <option value="2">Two</option>
-				      <option value="3">Three</option>
+				    <select class="form-select rounded-0">
+				      <option selected>금융기관명</option>
+				      <option>판매 및 환전처명</option>
+				      <option>주소</option>
+				      <option>내 위치</option>
 				    </select>
 				  </div>
 		          <input class="form-control" type="text" placeholder="도로명 주소로 검색해보세요" aria-label="Search">
 		          <div class="input-group-append">
-				    <button class="btn btn-outline-secondary" type="submit">검색</button>
+				    <button class="btn btn-outline-secondary rounded-0" type="submit">검색</button>
 				  </div>
 	          	</form>
 		      </div>
