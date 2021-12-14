@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@page import="com.localgift.giftlist.FranchiseeVO" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>가맹점 수정</title>
+<title>가맹점 입력</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <!-- ref: https://codepen.io/samnorton/pen/oNYajYM -->
 <style>
@@ -29,7 +28,6 @@
     body {
         height: 100%;
         background-color: #152733;
-        overflow: hidden;
     }
 
 
@@ -173,23 +171,18 @@
     }
 </style>
 </head>
-
-<%
-	FranchiseeVO u = (FranchiseeVO)request.getAttribute("franchiseeVO");
-%>
-
 <body>
 	<div class="form-body">
         <div class="row">
             <div class="form-holder">
                 <div class="form-content">
                     <div class="form-items">
-                        <h3>가맹점 수정하기</h3>
-                        <p>다음 항목들을 수정해주세요.</p>
-                        <form action="../editok" method="post" class="requires-validation" novalidate>
+                        <h3>새 가맹점 등록하기</h3>
+                        <p>다음 내용들을 모두 작성해주세요.</p>
+                        <form action="addok" method="post" class="requires-validation" novalidate>
 
                             <div class="col-md-12">
-                                <input class="form-control" type="text" name="name" placeholder="업체명" required>
+                                <input class="form-control" type="text" name="belong" placeholder="업체명" required>
                                 <div class="invalid-feedback">가맹점 이름이 입력되지 않았습니다!</div>
                             </div>
 
@@ -223,9 +216,15 @@
                                 <div class="invalid-feedback">경도가 입력되지 않았습니다!</div>
                             </div>
 
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label">본 정보를 제공하는 데에 동의합니다.</label>
+                                <div class="invalid-feedback">본 동의안에 동의해야 합니다!</div>
+                            </div>
+
                             <div class="form-button mt-3">
-                                <button id="submit" type="submit" class="btn btn-primary">수정하기</button>
-                                <button type="button" onclick="history.back()" class="btn btn-primary">취소</button>
+                                <button id="submit" type="submit" class="btn btn-primary">등록하기</button>
+                                <a href="list">리스트로 돌아가기</a>
                             </div>
                         </form>
                     </div>
