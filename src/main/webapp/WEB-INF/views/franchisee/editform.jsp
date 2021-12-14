@@ -208,7 +208,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <input class="form-control" type="text" name="address" placeholder="주소" required>
+                                <tr><td>주소:</td><td><textarea cols="50" rows="5" name="address" placeholder="주소"><%=u.getAddress()%></textarea></td></tr>
                                 <div class="invalid-feedback">주소가 입력되지 않았습니다!</div>
                             </div>
 
@@ -223,6 +223,7 @@
                             </div>
 
                             <div class="form-button mt-3">
+                            	<button id="reset" type="reset" >초기화</button>
                                 <button id="submit" type="submit" class="btn btn-primary">수정하기</button>
                                 <button type="button" onclick="history.back()" class="btn btn-primary">취소</button>
                             </div>
