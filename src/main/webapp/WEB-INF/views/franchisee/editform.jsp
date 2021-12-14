@@ -208,7 +208,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <tr><td>주소:</td><td><textarea cols="50" rows="5" name="address" placeholder="주소"></textarea></td></tr>
+                                <tr><td>주소:</td><td><textarea cols="50" rows="5" name="address" placeholder="주소"><%=u.getAddress()%></textarea></td></tr>
                                 <div class="invalid-feedback">주소가 입력되지 않았습니다!</div>
                             </div>
 
