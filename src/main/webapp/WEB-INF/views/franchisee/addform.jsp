@@ -182,7 +182,7 @@
                         <form action="addok" method="post" class="requires-validation" novalidate>
 
                             <div class="col-md-12">
-                                <input class="form-control" type="text" name="belong" placeholder="업체명" required>
+                                <input class="form-control" type="text" name="name" placeholder="업체명" required>
                                 <div class="invalid-feedback">가맹점 이름이 입력되지 않았습니다!</div>
                             </div>
 
@@ -202,7 +202,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <input class="form-control" type="text" name="address" placeholder="주소" required>
+                                <tr><td>주소:</td><td><textarea cols="50" rows="5" name="address" placeholder="주소"></textarea></td></tr>
                                 <div class="invalid-feedback">주소가 입력되지 않았습니다!</div>
                             </div>
 
@@ -215,7 +215,7 @@
                                 <input class="form-control" type="text" name="longitude" placeholder="경도" required>
                                 <div class="invalid-feedback">경도가 입력되지 않았습니다!</div>
                             </div>
-
+                            <br>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                                 <label class="form-check-label">본 정보를 제공하는 데에 동의합니다.</label>
@@ -223,6 +223,7 @@
                             </div>
 
                             <div class="form-button mt-3">
+                            	<button id="reset" type="reset" >초기화</button>
                                 <button id="submit" type="submit" class="btn btn-primary">등록하기</button>
                                 <a href="list">리스트로 돌아가기</a>
                             </div>
