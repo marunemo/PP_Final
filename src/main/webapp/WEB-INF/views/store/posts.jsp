@@ -228,16 +228,16 @@
 		            <a class="nav-link" href="../login/logout">로그아웃</a>
 		          </li>
 		        </ul>
-		        <form class="input-group w-50">
+		        <form action="list" class="input-group w-50">
 	        	  <div class="input-group-prepend">
-				    <select class="form-select rounded-0" id="searchSelect" onchange="changeInputPlaceholder()">
+				    <select class="form-select rounded-0" id="searchSelect" name="column" onchange="changeInputPlaceholder()">
 				      <option value="belong" selected>금융기관명</option>
 				      <option value="name">판매 및 환전처명</option>
 				      <option value="address">주소</option>
 				      <option value="position">내 위치</option>
 				    </select>
 				  </div>
-		          <input class="form-control" id="searchText" type="text" placeholder="금융기관명(으)로 검색해보세요" aria-label="Search">
+		          <input class="form-control" id="searchText" name="keyword" type="text" placeholder="금융기관명(으)로 검색해보세요" aria-label="Search">
 		          <div class="input-group-append">
 				    <button class="btn btn-outline-secondary rounded-0" type="submit">검색</button>
 				  </div>
