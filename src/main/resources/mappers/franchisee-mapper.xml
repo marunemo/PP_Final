@@ -23,4 +23,16 @@
 		<select id="getFranchiseeList" resultType="franchisee">
 			select * from FRANCHISEE order by seq desc
 		</select>
+		<select id="searchFranchiseeList" resultType="franchisee">
+			select * from FRANCHISEE
+			<where>
+				<if test='column == "name"'>name</if>
+				<if test='column == "callnum"'>callnum</if>
+				<if test='column == "category"'>category</if>
+				<if test='column == "admin"'>admin</if>
+				<if test='column == "address"'>address</if>
+				LIKE #{keyword}
+			</where>
+			order by seq desc
+		</select>
 </mapper>

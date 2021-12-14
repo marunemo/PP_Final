@@ -1,5 +1,7 @@
 package com.localgift.giftlist.franchisee;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,8 +16,13 @@ public class FranchiseeController {
 	FranchiseeServiceImpl franchiseeService;
 	
 	@RequestMapping(value = "/franchisee/list", method = RequestMethod.GET)
-	public String franchiseelist(Model model) {
-		model.addAttribute("list", franchiseeService.getFranchiseeList());
+	public String franchiseelist(Model model, HttpServletRequest request) {
+		String column = request.getParameter("column");
+		String keyword = request.getParameter("keyword");
+		if(column == null || keyword == null)
+			model.addAttribute("list", franchiseeService.getFranchiseeList());			
+		else
+			model.addAttribute("list", franchiseeService.searchFranchiseeList(column, keyword));
 		return "franchisee/posts";
 	}
 	

@@ -35,4 +35,9 @@ public class FranchiseeServiceImpl implements FranchiseeService{
 	public int deleteFranchisee(int id) {
 		return franchiseeDAO.deleteFranchisee(id);
 	}
+
+	@Override
+	public List<FranchiseeVO> searchFranchiseeList(String column, String keyword) {
+		return franchiseeDAO.searchFranchiseeList(column, keyword);
+	}
 }

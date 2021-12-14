@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- ref: https://www.bootdey.com/snippets/view/Event-Schedule-list -->
     <style>
         .event-store-area .tab-area .nav-tabs {
@@ -227,8 +228,21 @@
 		            <a class="nav-link" href="../login/logout">로그아웃</a>
 		          </li>
 		        </ul>
-		        <form class="w-25">
-		          <input class="form-control me-2" type="text" placeholder="도로명 주소로 검색해보세요" aria-label="Search">
+		        <form action="list" class="input-group w-50">
+	        	  <div class="input-group-prepend">
+				    <select class="form-select rounded-0" id="searchSelect" name="column" onchange="changeInputPlaceholder()">
+				      <option value="name" selected>업체명</option>
+				      <option value="callnum">연락처</option>
+				      <option value="category">업태</option>
+				      <option value="admin">행정동</option>
+				      <option value="address">주소</option>
+				      <option value="position">내 위치</option>
+				    </select>
+				  </div>
+		          <input class="form-control" id="searchText" name="keyword" type="text" placeholder="금융기관명(으)로 검색해보세요" aria-label="Search">
+		          <div class="input-group-append">
+				    <button class="btn btn-outline-secondary rounded-0" type="submit">검색</button>
+				  </div>
 	          	</form>
 		      </div>
 		    </div>
@@ -313,6 +327,11 @@
         function delete_ok(id) {
             var a = confirm("정말로 삭제하겠습니까?");
             if (a) location.href = 'delete/' + id;
+        }
+        
+        function changeInputPlaceholder() {
+        	var selectedOption = $('#searchSelect option:checked').text();
+        	$('#searchText').attr('placeholder', selectedOption + '(으)로 검색해보세요');
         }
     </script>
 </body>

@@ -8,4 +8,5 @@ public interface FranchiseeService {
 	public int updateFranchisee(FranchiseeVO vo);
 	public FranchiseeVO getFranchisee(int seq);
 	public List<FranchiseeVO> getFranchiseeList();
+	public List<FranchiseeVO> searchFranchiseeList(String column, String keyword);
 }
