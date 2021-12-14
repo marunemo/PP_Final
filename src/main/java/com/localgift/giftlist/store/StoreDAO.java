@@ -37,7 +37,7 @@ public class StoreDAO {
 	public List<StoreVO> searchStoreList(String column, String keyword) {
 		Map<String, Object> searchMap = new HashMap<String, Object>();
 		searchMap.put("column", column);
-		searchMap.put("keyword", keyword);
+		searchMap.put("keyword", "%" + keyword + "%");
 		return sqlSession.selectList("Store.searchStoreList", searchMap);
 	}
 }

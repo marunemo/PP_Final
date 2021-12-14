@@ -19,9 +19,12 @@ public class StoreController {
 		return "store/posts";
 	}
 	
-	@RequestMapping(value = "/store/list/c={column}&k={keyword}", method = RequestMethod.GET)
+	@RequestMapping(value = "/store/list/{column}/{keyword}", method = RequestMethod.GET)
 	public String storelist(@PathVariable("column") String column, @PathVariable("keyword") String keyword, Model model) {
-		model.addAttribute("list", storeService.searchStoreList(column, keyword));
+		if(column == null || keyword == null)
+			model.addAttribute("list", storeService.getStoreList());
+		else
+			model.addAttribute("list", storeService.searchStoreList(column, keyword));
 		return "store/posts";
 	}
 

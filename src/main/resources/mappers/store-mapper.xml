@@ -24,6 +24,6 @@
 			select * from STORE order by seq desc
 		</select>
 		<select id="searchStoreList" resultType="store">
-			select * from STORE where #{column} LIKE %#{keyword}% order by seq desc
+			select * from STORE where #{column} LIKE #{keyword} order by seq desc
 		</select>
 </mapper>
