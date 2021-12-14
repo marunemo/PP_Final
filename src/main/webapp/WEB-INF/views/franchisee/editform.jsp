@@ -29,6 +29,7 @@
     body {
         height: 100%;
         background-color: #152733;
+        overflow-x: hidden;
     }
 
 
@@ -207,8 +208,8 @@
                                 <div class="invalid-feedback">행정동이 입력되지 않았습니다!</div>
                             </div>
 
-                            <div class="col-md-12">
-                                <tr><td>주소:</td><td><textarea cols="50" rows="5" name="address" placeholder="주소"><%=u.getAddress()%></textarea></td></tr>
+                            <div class="col-md-12 pt-3">
+                                <textarea class="form-control" cols="50" rows="5" name="address" placeholder="주소" required><%=u.getAddress()%></textarea>
                                 <div class="invalid-feedback">주소가 입력되지 않았습니다!</div>
                             </div>
 
@@ -222,10 +223,10 @@
                                 <div class="invalid-feedback">경도가 입력되지 않았습니다!</div>
                             </div>
 
-                            <div class="form-button mt-3">
-                                <button id="submit" type="submit" class="btn btn-primary">수정하기</button>
-                                <button id="reset" type="reset" class="btn btn-outline-danger">초기화</button>
-                                <button type="button" onclick="history.back()" class="btn btn-primary">취소</button>
+                            <div class="form-button mt-3 d-flex justify-content-center">
+                                <button id="submit" type="submit" class="btn btn-success mx-1">수정하기</button>
+                                <button id="reset" type="reset" class="btn btn-outline-danger mx-1">초기화</button>
+                                <button type="button" onclick="history.back()" class="btn btn-primary mx-1">취소</button>
                             </div>
                         </form>
                     </div>

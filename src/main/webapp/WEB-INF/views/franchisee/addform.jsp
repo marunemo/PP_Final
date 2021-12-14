@@ -28,6 +28,7 @@
     body {
         height: 100%;
         background-color: #152733;
+        overflow-x: hidden;
     }
 
 
@@ -201,8 +202,8 @@
                                 <div class="invalid-feedback">행정동이 입력되지 않았습니다!</div>
                             </div>
 
-                            <div class="col-md-12">
-                                <tr><td>주소:</td><td><textarea cols="50" rows="5" name="address" placeholder="주소"></textarea></td></tr>
+                            <div class="col-md-12 pt-3">
+                                <textarea class="form-control" cols="50" rows="5" name="address" placeholder="주소" required></textarea>
                                 <div class="invalid-feedback">주소가 입력되지 않았습니다!</div>
                             </div>
 
@@ -215,17 +216,17 @@
                                 <input class="form-control" type="text" name="longitude" placeholder="경도" required>
                                 <div class="invalid-feedback">경도가 입력되지 않았습니다!</div>
                             </div>
-                            <br>
+
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                                 <label class="form-check-label">본 정보를 제공하는 데에 동의합니다.</label>
                                 <div class="invalid-feedback">본 동의안에 동의해야 합니다!</div>
                             </div>
 
-                            <div class="form-button mt-3">
-                                <button id="submit" type="submit" class="btn btn-primary">등록하기</button>
-                                <button id="reset" type="reset" class="btn btn-outline-danger">초기화</button>
-                                <a href="list">리스트로 돌아가기</a>
+                            <div class="form-button mt-3 d-flex justify-content-center">
+                                <button id="submit" type="submit" class="btn btn-success mx-1">등록하기</button>
+                                <button id="reset" type="reset" class="btn btn-outline-danger mx-1">초기화</button>
+                                <a href="list" class="btn btn-primary active mx-1" role="button">리스트로 돌아가기</a>
                             </div>
                         </form>
                     </div>

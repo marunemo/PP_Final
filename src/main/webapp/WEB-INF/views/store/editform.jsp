@@ -29,6 +29,7 @@
     body {
         height: 100%;
         background-color: #152733;
+        overflow-x: hidden;
     }
 
 
@@ -197,7 +198,7 @@
                                 <div class="invalid-feedback">판매 및 환전처명이 입력되지 않았습니다!</div>
                             </div>
 
-                            <div class="col-md-12 mt-2">
+                            <div class="col-md-12 pt-3">
                                 <textarea class="form-control" cols="50" rows="5" name="address" placeholder="주소" required><%=u.getAddress()%></textarea>
                                 <div class="invalid-feedback">주소가 입력되지 않았습니다!</div>
                             </div>
