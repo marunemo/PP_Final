@@ -230,14 +230,14 @@
 		        </ul>
 		        <form class="input-group w-50">
 	        	  <div class="input-group-prepend">
-				    <select class="form-select rounded-0">
-				      <option selected>금융기관명</option>
-				      <option>판매 및 환전처명</option>
-				      <option>주소</option>
-				      <option>내 위치</option>
+				    <select class="form-select rounded-0" id="searchSelect" onchange="changeInputPlaceholder()">
+				      <option value="금융기관명" selected>금융기관명</option>
+				      <option value="판매 및 환전처명">판매 및 환전처명</option>
+				      <option value="주소">주소</option>
+				      <option value="내 위치">내 위치</option>
 				    </select>
 				  </div>
-		          <input class="form-control" type="text" placeholder="도로명 주소로 검색해보세요" aria-label="Search">
+		          <input class="form-control" id="searchText" type="text" placeholder="도로명 주소로 검색해보세요" aria-label="Search">
 		          <div class="input-group-append">
 				    <button class="btn btn-outline-secondary rounded-0" type="submit">검색</button>
 				  </div>
@@ -325,6 +325,11 @@
         function delete_ok(id) {
             var a = confirm("정말로 삭제하겠습니까?");
             if (a) location.href = 'delete/' + id;
+        }
+        
+        function changeInputPlaceholder() {
+        	var selectedOption = $('#searchSelect').val();
+        	$('#searchText').attr('placeholder', selectedOption + '(으)로 검색해보세요');
         }
     </script>
 </body>
