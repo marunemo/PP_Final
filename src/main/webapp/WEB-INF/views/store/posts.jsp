@@ -366,7 +366,7 @@
         
         function gotoBottom() {
         	$("html, body").animate({ scrollTop: $("html, body").height() }, 300);
-        } 
+        }
     </script>
 </body>
 </html>
