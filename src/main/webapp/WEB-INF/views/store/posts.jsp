@@ -214,6 +214,18 @@
         .event-store-area-two nav .container .collapse .input-group div.input-group-append .rounded-0 {
         	border-radius: 0 5px 5px 0!important;
         }
+        
+        button.gotoDownBtn {
+        	position: fixed;
+        	background-color: #fff;
+        	border: 0;
+        	right: 5%;
+        	bottom: 5%;
+        	width: 50px;
+        	height: 50px;
+       	    box-shadow: 5px 5px 5px 0px rgba(8, 8, 8, 0.3);
+        }
+        
     </style>
 </head>
 
@@ -332,6 +344,9 @@
       </ul>
       <p class="text-center text-muted">© 2021 실전프로젝트1 기말 과제</p>
     </footer>
+    <button class="rounded-circle gotoDownBtn">
+    	<i class="fa fa-chevron-down fa-2x"></i>
+    </button>
     <script>
         function delete_ok(id) {
             var a = confirm("정말로 삭제하겠습니까?");
