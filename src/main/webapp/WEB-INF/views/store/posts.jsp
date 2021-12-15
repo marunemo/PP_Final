@@ -294,7 +294,7 @@
                                                 </th>
                                                 <td>
                                                     <div class="event-img">
-                                                        <a href="https://www.freeiconspng.com/img/23485" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/no-image-icon-6.png" width="350" alt="Icon No Download" /></a>
+                                                        <img src="https://www.freeiconspng.com/uploads/no-image-icon-6.png" width="100%" alt="Icon No Download" />
                                                     </div>
                                                 </td>
                                                 <td>
