@@ -206,6 +206,14 @@
             height: 100px;
             border-radius: 8px;
         }
+        
+        .event-store-area-two nav .container .collapse .input-group div.input-group-prepend .rounded-0 {
+        	border-radius: 5px 0 0 5px!important;
+        }
+        
+        .event-store-area-two nav .container .collapse .input-group div.input-group-append .rounded-0 {
+        	border-radius: 0 5px 5px 0!important;
+        }
     </style>
 </head>
 
