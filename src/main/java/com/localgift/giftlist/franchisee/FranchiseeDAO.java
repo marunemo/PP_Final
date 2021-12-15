@@ -1,6 +1,8 @@
 package com.localgift.giftlist.franchisee;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,5 +32,12 @@ public class FranchiseeDAO {
 	
 	public int deleteFranchisee(int seq) {
 		return sqlSession.delete("Franchisee.deleteFranchisee", seq);
+	}
+	
+	public List<FranchiseeVO> searchFranchiseeList(String column, String keyword) {
+		Map<String, Object> searchMap = new HashMap<String, Object>();
+		searchMap.put("column", column);
+		searchMap.put("keyword", "%" + keyword + "%");
+		return sqlSession.selectList("Franchisee.searchFranchiseeList", searchMap);
 	}
 }

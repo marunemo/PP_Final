@@ -1,5 +1,7 @@
 package com.localgift.giftlist.store;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,11 +16,16 @@ public class StoreController {
 	StoreServiceImpl storeService;
 	
 	@RequestMapping(value = "/store/list", method = RequestMethod.GET)
-	public String storelist(Model model) {
-		model.addAttribute("list", storeService.getStoreList());
+	public String storelist(Model model, HttpServletRequest request) {
+		String column = request.getParameter("column");
+		String keyword = request.getParameter("keyword");
+		if(column == null || keyword == null)
+			model.addAttribute("list", storeService.getStoreList());
+		else
+			model.addAttribute("list", storeService.searchStoreList(column, keyword));
 		return "store/posts";
 	}
-	
+
 	@RequestMapping(value = "/store/add", method = RequestMethod.GET)
 	public String addPost() {
 		return "store/addform";

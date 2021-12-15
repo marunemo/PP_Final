@@ -8,4 +8,5 @@ public interface StoreService {
 	public int updateStore(StoreVO vo);
 	public StoreVO getStore(int seq);
 	public List<StoreVO> getStoreList();
+	public List<StoreVO> searchStoreList(String column, String keyword);
 }

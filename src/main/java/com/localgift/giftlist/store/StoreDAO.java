@@ -1,6 +1,8 @@
 package com.localgift.giftlist.store;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,5 +32,12 @@ public class StoreDAO {
 	
 	public int deleteStore(int seq) {
 		return sqlSession.delete("Store.deleteStore", seq);
+	}
+	
+	public List<StoreVO> searchStoreList(String column, String keyword) {
+		Map<String, Object> searchMap = new HashMap<String, Object>();
+		searchMap.put("column", column);
+		searchMap.put("keyword", "%" + keyword + "%");
+		return sqlSession.selectList("Store.searchStoreList", searchMap);
 	}
 }

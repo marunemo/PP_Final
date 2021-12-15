@@ -35,4 +35,9 @@ public class StoreServiceImpl implements StoreService{
 	public int deleteStore(int id) {
 		return storeDAO.deleteStore(id);
 	}
+
+	@Override
+	public List<StoreVO> searchStoreList(String column, String keyword) {
+		return storeDAO.searchStoreList(column, keyword);
+	}
 }

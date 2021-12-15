@@ -28,6 +28,7 @@
     body {
         height: 100%;
         background-color: #152733;
+        overflow-x: hidden;
     }
 
 
@@ -191,8 +192,8 @@
                                 <div class="invalid-feedback">판매 및 환전처명이 입력되지 않았습니다!</div>
                             </div>
 
-                            <div class="col-md-12">
-                                <tr><td>주소:</td><td><textarea cols="50" rows="5" name="address" placeholder="주소"></textarea></td></tr>
+                            <div class="col-md-12 pt-3">
+                                <textarea class="form-control" cols="50" rows="5" name="address" placeholder="주소" required></textarea>
                                 <div class="invalid-feedback">주소가 입력되지 않았습니다!</div>
                             </div>
 
@@ -212,10 +213,10 @@
                                 <div class="invalid-feedback">본 동의안에 동의해야 합니다!</div>
                             </div>
 
-                            <div class="form-button mt-3">
-                            	<button id="reset" type="reset" >초기화</button>
-                                <button id="submit" type="submit" class="btn btn-primary">등록하기</button>
-                                <a href="list">리스트로 돌아가기</a>
+                            <div class="form-button mt-3 d-flex justify-content-center">
+                                <button id="submit" type="submit" class="btn btn-success mx-1">등록하기</button>
+                                <button id="reset" type="reset" class="btn btn-outline-danger mx-1">초기화</button>
+                                <a href="list" class="btn btn-primary active mx-1" role="button">리스트로 돌아가기</a>
                             </div>
                         </form>
                     </div>
