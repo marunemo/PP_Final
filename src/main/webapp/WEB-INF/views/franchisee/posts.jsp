@@ -206,6 +206,26 @@
             height: 100px;
             border-radius: 8px;
         }
+        
+        .event-store-area-two nav .container .collapse .input-group div.input-group-prepend .rounded-0 {
+        	border-radius: 5px 0 0 5px!important;
+        }
+        
+        .event-store-area-two nav .container .collapse .input-group div.input-group-append .rounded-0 {
+        	border-radius: 0 5px 5px 0!important;
+        }
+        
+        button.gotoDownBtn {
+        	position: fixed;
+        	background-color: #fff;
+        	border: 0;
+        	right: 5%;
+        	bottom: 5%;
+        	width: 50px;
+        	height: 50px;
+       	    box-shadow: 5px 5px 5px 0px rgba(8, 8, 8, 0.3);
+        }
+        
     </style>
 </head>
 
@@ -223,6 +243,9 @@
 		          </li>
 		          <li class="nav-item">
 		            <a class="nav-link" href="../store/list">판매점</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="../franchisee/list">가맹점</a>
 		          </li>
 		          <li class="nav-item">
 		            <a class="nav-link" href="../login/logout">로그아웃</a>
@@ -273,12 +296,11 @@
                                                 </th>
                                                 <td>
                                                     <div class="event-img">
-                                                        <img src="https://t1.daumcdn.net/cfile/tistory/996A6F425C5D81CD15"
-                                                            alt="이미지" />
+                                                        <img src="https://www.freeiconspng.com/uploads/no-image-icon-6.png" width="100%" alt="Icon No Download" />
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="event-wrap">
+                                                    <div class="event-wrap px-3">
                                                         <h3><p>${u.getName()}</p></h3>
                                                         <div class="meta">
                                                             <p>${u.getCallnum()}, ${u.getCategory()}</p>
@@ -318,11 +340,15 @@
     <footer>
       <ul class="nav justify-content-center border-bottom pb-3 mt-3 mb-3">
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="javascript:gotoTop()" class="nav-link px-2 text-muted">Header</a></li>
         <li class="nav-item"><a href="https://github.com/alsco1234/PP_Final" class="nav-link px-2 text-muted">Github</a></li>
         <li class="nav-item"><a href="../login/logout" class="nav-link px-2 text-muted">Logout</a></li>
       </ul>
       <p class="text-center text-muted">© 2021 실전프로젝트1 기말 과제</p>
     </footer>
+    <button class="rounded-circle gotoDownBtn" onclick="gotoBottom()">
+    	<i class="fa fa-chevron-down fa-2x"></i>
+    </button>
     <script>
         function delete_ok(id) {
             var a = confirm("정말로 삭제하겠습니까?");
@@ -332,6 +358,15 @@
         function changeInputPlaceholder() {
         	var selectedOption = $('#searchSelect option:checked').text();
         	$('#searchText').attr('placeholder', selectedOption + '(으)로 검색해보세요');
+        }
+        
+        function gotoTop() {
+			document.body.scrollTop = 0; // For Safari
+			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+        
+        function gotoBottom() {
+        	$("html, body").animate({ scrollTop: $("html, body").height() }, 300);
         }
     </script>
 </body>
