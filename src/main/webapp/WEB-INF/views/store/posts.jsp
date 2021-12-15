@@ -260,7 +260,7 @@
 				      <option value="position">내 위치</option>
 				    </select>
 				  </div>
-		          <input class="form-control" id="searchText" name="keyword" type="text" placeholder="금융기관명(으)로 검색해보세요" aria-label="Search">
+		          <input class="form-control" id="searchText" name="keyword" type="text" placeholder="금융기관명(으)로 검색해보세요" aria-label="Search" required>
 		          <div class="input-group-append">
 				    <button class="btn btn-outline-secondary rounded-0" type="submit">검색</button>
 				  </div>
@@ -355,7 +355,16 @@
         
         function changeInputPlaceholder() {
         	var selectedOption = $('#searchSelect option:checked').text();
-        	$('#searchText').attr('placeholder', selectedOption + '(으)로 검색해보세요');
+        	if(selectedOption !== '내 위치') {
+        		$('#searchText').attr('placeholder', selectedOption + '(으)로 검색해보세요');
+        		$('#searchText').removeAttr('pattern');
+        		$('#searchText').removeAttr('title');
+        	}
+        	else {
+        		$('#searchText').attr('placeholder', '현재 위치(위도, 경도)로 검색해보세요');
+        		$('#searchText').attr('pattern', '^[0-9]+[\.][0-9]+, [0-9]+[\.][0-9]+$');
+        		$('#searchText').attr('title', '이 입력란을 작성하세요.\n양식 : [0-9]+[\.][0-9]+, [0-9]+[\.][0-9]+');
+        	}
         }
         
         function gotoTop() {
