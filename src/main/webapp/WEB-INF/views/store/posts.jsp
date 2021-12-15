@@ -294,8 +294,7 @@
                                                 </th>
                                                 <td>
                                                     <div class="event-img">
-                                                        <img src="https://t1.daumcdn.net/cfile/tistory/996A6F425C5D81CD15"
-                                                            alt="이미지" />
+                                                        <a href="https://www.freeiconspng.com/img/23485" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/no-image-icon-6.png" width="350" alt="Icon No Download" /></a>
                                                     </div>
                                                 </td>
                                                 <td>
