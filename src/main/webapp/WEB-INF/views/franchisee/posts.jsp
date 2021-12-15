@@ -300,7 +300,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="event-wrap">
+                                                    <div class="event-wrap px-3">
                                                         <h3><p>${u.getName()}</p></h3>
                                                         <div class="meta">
                                                             <p>${u.getCallnum()}, ${u.getCategory()}</p>

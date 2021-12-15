@@ -298,7 +298,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="event-wrap">
+                                                    <div class="event-wrap px-3">
                                                         <h3><p>${u.getBelong()}</p></h3>
                                                         <div class="meta">
                                                             <p>${u.getName()}</p>
