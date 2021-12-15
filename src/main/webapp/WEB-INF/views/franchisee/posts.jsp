@@ -225,6 +225,9 @@
 		            <a class="nav-link" href="../store/list">판매점</a>
 		          </li>
 		          <li class="nav-item">
+		            <a class="nav-link" href="../franchisee/list">가맹점</a>
+		          </li>
+		          <li class="nav-item">
 		            <a class="nav-link" href="../login/logout">로그아웃</a>
 		          </li>
 		        </ul>
