@@ -339,6 +339,7 @@
     <footer>
       <ul class="nav justify-content-center border-bottom pb-3 mt-3 mb-3">
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="javascript:gotoTop()" class="nav-link px-2 text-muted">Header</a></li>
         <li class="nav-item"><a href="https://github.com/alsco1234/PP_Final" class="nav-link px-2 text-muted">Github</a></li>
         <li class="nav-item"><a href="../login/logout" class="nav-link px-2 text-muted">Logout</a></li>
       </ul>
@@ -356,6 +357,11 @@
         function changeInputPlaceholder() {
         	var selectedOption = $('#searchSelect option:checked').text();
         	$('#searchText').attr('placeholder', selectedOption + '(으)로 검색해보세요');
+        }
+        
+        function gotoTop() {
+			document.body.scrollTop = 0; // For Safari
+			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
         
         function gotoBottom() {
