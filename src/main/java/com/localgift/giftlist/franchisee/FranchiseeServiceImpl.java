@@ -40,4 +40,9 @@ public class FranchiseeServiceImpl implements FranchiseeService{
 	public List<FranchiseeVO> searchFranchiseeList(String column, String keyword) {
 		return franchiseeDAO.searchFranchiseeList(column, keyword);
 	}
+
+	@Override
+	public List<FranchiseeVO> lookoutFranchiseeList(String latitude, String longitude) {
+		return franchiseeDAO.lookoutFranchiseeList(latitude, longitude);
+	}
 }

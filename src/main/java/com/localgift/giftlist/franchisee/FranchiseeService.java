@@ -9,4 +9,5 @@ public interface FranchiseeService {
 	public FranchiseeVO getFranchisee(int seq);
 	public List<FranchiseeVO> getFranchiseeList();
 	public List<FranchiseeVO> searchFranchiseeList(String column, String keyword);
+	public List<FranchiseeVO> lookoutFranchiseeList(String latitude, String longitude);
 }
