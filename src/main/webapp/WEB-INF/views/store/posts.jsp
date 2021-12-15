@@ -344,7 +344,7 @@
       </ul>
       <p class="text-center text-muted">© 2021 실전프로젝트1 기말 과제</p>
     </footer>
-    <button class="rounded-circle gotoDownBtn">
+    <button class="rounded-circle gotoDownBtn" onclick="gotoBottom()">
     	<i class="fa fa-chevron-down fa-2x"></i>
     </button>
     <script>
@@ -357,6 +357,10 @@
         	var selectedOption = $('#searchSelect option:checked').text();
         	$('#searchText').attr('placeholder', selectedOption + '(으)로 검색해보세요');
         }
+        
+        function gotoBottom() {
+        	$("html, body").animate({ scrollTop: $("html, body").height() }, 300);
+        } 
     </script>
 </body>
 </html>
