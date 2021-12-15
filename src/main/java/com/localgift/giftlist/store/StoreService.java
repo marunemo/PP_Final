@@ -9,4 +9,5 @@ public interface StoreService {
 	public StoreVO getStore(int seq);
 	public List<StoreVO> getStoreList();
 	public List<StoreVO> searchStoreList(String column, String keyword);
+	public List<StoreVO> lookoutStoreList(String latitude, String longitude);
 }
