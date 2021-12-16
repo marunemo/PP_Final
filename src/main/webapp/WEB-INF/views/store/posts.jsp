@@ -308,7 +308,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="r-no"><span>${u.getRegdate()}</span></div>
+                                                    <div class="r-no"><span>${u.toRegdateString()}</span></div>
                                                 </td>
                                                 <td class="btn-layout">
                                                     <div class="primary-btn">
