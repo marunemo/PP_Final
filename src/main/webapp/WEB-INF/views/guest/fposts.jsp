@@ -242,13 +242,13 @@
 		            <a class="nav-link active" aria-current="page" href="#">홈</a>
 		          </li>
 		          <li class="nav-item">
-		            <a class="nav-link" href="../store/list/guest">판매점</a>
+		            <a class="nav-link" href="../store/list">판매점</a>
 		          </li>
 		          <li class="nav-item">
-		            <a class="nav-link" href="../franchisee/list/guest">가맹점</a>
+		            <a class="nav-link" href="../franchisee/list">가맹점</a>
 		          </li>
 		          <li class="nav-item">
-		            <a class="nav-link" href="../login/login">로그인</a>
+		            <a class="nav-link" href="../../login/login">로그인</a>
 		          </li>
 		        </ul>
 		        <form action="list" class="input-group w-50">
@@ -285,7 +285,7 @@
                                             <th class="text-center" scope="col">업태</th>
                                             <th class="text-center" scope="col">행정동</th>
                                             <th class="text-center" scope="col">주소</th>
-                                            <th class="text-center" scope="col">위도, 경도</th>
+                                            <th class="text-center" colspan="2" scope="col">위도, 경도</th>
                                             <th class="text-center" scope="col">수정일</th>
                                         </tr>
                                     </thead>
@@ -335,7 +335,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="event-wrap px-3">
-                                                        <p>${u.getLongtitude()}</p>
+                                                        <p>${u.getLongitude()}</p>
                                                     </div>
                                                 </td>
                                                 <td>
@@ -357,7 +357,7 @@
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
         <li class="nav-item"><a href="javascript:gotoTop()" class="nav-link px-2 text-muted">Header</a></li>
         <li class="nav-item"><a href="https://github.com/alsco1234/PP_Final" class="nav-link px-2 text-muted">Github</a></li>
-        <li class="nav-item"><a href="../login/login" class="nav-link px-2 text-muted">Login</a></li>
+        <li class="nav-item"><a href="../../login/login" class="nav-link px-2 text-muted">Login</a></li>
       </ul>
       <p class="text-center text-muted">© 2021 실전프로젝트1 기말 과제</p>
     </footer>
