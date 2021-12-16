@@ -40,16 +40,13 @@
 	              </div>
 	              
 	              <button class="btn btn-outline-light btn-lg px-5" type="submit">로그인</button>
-	              <div class="d-flex justify-content-center text-center mt-2 pt-1">
-	                <a class="btn btn-outline-light btn-md px-5" href="../guest/store/list">
-	                  <i class="fa fa-user-circle"></i>게스트로 로그인
-	                </a>
-	              </div>
 	            </form>
 	            <div>
 	              <p class="mb-0">
 	              	계정이 없나요?
-	              	<a href="javascript:alert('사실 그런거 없음 ㅎ')" class="text-white-50 fw-bold">관리자에게 문의</a>
+	              	<a href="../guest/store/list" class="text-white-50 fw-bold">
+	              	  <u><i class="fa fa-user-circle px-1"></i></u>게스트 로그인
+	              	</a>
              	  </p>
 	            </div>
 	
