@@ -1,5 +1,6 @@
 package com.localgift.giftlist.franchisee;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class FranchiseeVO {
@@ -73,4 +74,9 @@ public class FranchiseeVO {
 	private String longitude;
 	private Date regdate;
 	private int cnt;
+	
+	public String toRegdateString() {
+		SimpleDateFormat pattern = new SimpleDateFormat("yyyy년 MM월 dd일 a hh:mm:ss");
+		return pattern.format(this.regdate);
+	}
 }
