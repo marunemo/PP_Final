@@ -8,6 +8,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.localgift.giftlist.store.StoreVO;
+
 @Repository
 public class FranchiseeDAO {
 	
@@ -39,5 +41,12 @@ public class FranchiseeDAO {
 		searchMap.put("column", column);
 		searchMap.put("keyword", "%" + keyword + "%");
 		return sqlSession.selectList("Franchisee.searchFranchiseeList", searchMap);
+	}
+	
+	public List<FranchiseeVO> lookoutFranchiseeList(String latitude, String longitude) {
+		Map<String, Object> lookoutMap = new HashMap<String, Object>();
+		lookoutMap.put("latitude", Float.parseFloat(latitude));
+		lookoutMap.put("longitude", Float.parseFloat(longitude));
+		return sqlSession.selectList("Franchisee.lookoutFranchiseeList", lookoutMap);
 	}
 }

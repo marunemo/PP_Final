@@ -21,6 +21,10 @@ public class StoreController {
 		String keyword = request.getParameter("keyword");
 		if(column == null || keyword == null)
 			model.addAttribute("list", storeService.getStoreList());
+		else if(column.equals("position")) {
+			String[] ll = keyword.split(", ");
+			model.addAttribute("list", storeService.lookoutStoreList(ll[0], ll[1]));
+		}
 		else
 			model.addAttribute("list", storeService.searchStoreList(column, keyword));
 		return "store/posts";

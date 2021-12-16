@@ -40,4 +40,9 @@ public class StoreServiceImpl implements StoreService{
 	public List<StoreVO> searchStoreList(String column, String keyword) {
 		return storeDAO.searchStoreList(column, keyword);
 	}
+
+	@Override
+	public List<StoreVO> lookoutStoreList(String latitude, String longitude) {
+		return storeDAO.lookoutStoreList(latitude, longitude);
+	}
 }

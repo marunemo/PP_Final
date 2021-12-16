@@ -35,4 +35,12 @@
 			</where>
 			order by seq desc
 		</select>
+		<select id="lookoutFranchiseeList" resultType="franchisee">
+			select * from FRANCHISEE
+			where latitude <![CDATA[>=]]> (#{latitude} - 0.009)
+			AND latitude <![CDATA[<=]]> (#{latitude} + 0.009)
+			AND longitude <![CDATA[>=]]> (#{longitude} - 0.0118)
+			AND longitude <![CDATA[<=]]> (#{longitude} + 0.0118)
+			order by seq desc
+		</select>
 </mapper>
