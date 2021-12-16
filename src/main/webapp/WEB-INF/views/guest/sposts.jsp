@@ -248,7 +248,7 @@
 		            <a class="nav-link" href="../franchisee/list">가맹점</a>
 		          </li>
 		          <li class="nav-item">
-		            <a class="nav-link" href="../login/logout">로그아웃</a>
+		            <a class="nav-link" href="../../login/login">로그인</a>
 		          </li>
 		        </ul>
 		        <form action="list" class="input-group w-50">
@@ -277,10 +277,12 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center" scope="col">Id</th>
-                                            <th class="text-center" scope="col">금융기관</th>
-                                            <th class="text-center" scope="col">금융기관</th>
+                                            <th class="text-center" scope="col">판매점</th>
+                                            <th class="text-center" scope="col">금융기관명</th>
+                                            <th class="text-center" scope="col">판매 및 환전처명</th>
+                                            <th class="text-center" scope="col">주소</th>
+                                            <th class="text-center" colspan="2" scope="col">위도, 경도</th>
                                             <th class="text-center" scope="col">수정일</th>
-                                            <th class="text-center" scope="col" colspan="2">수정 및 삭제</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -289,7 +291,7 @@
                                                 <th scope="row">
                                                     <div class="event-date">
                                                         <span>${u.getSeq()}</span>
-                                                        <p>판매점</p>
+                                                        <p>가맹점</p>
                                                     </div>
                                                 </th>
                                                 <td>
@@ -298,37 +300,38 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="event-wrap px-3">
-                                                        <h3><p>${u.getBelong()}</p></h3>
-                                                        <div class="meta">
-                                                            <p>${u.getName()}</p>
-                                                            <p>${u.getAddress()}</p>
-                                                            <p>${u.getLatitude()}, ${u.getLongitude()}</p>
-                                                        </div>
+                                                    <div class="event-wrap">
+                                                        <p>${u.getBelong()}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="event-wrap">
+                                                        <p>${u.getName()}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="event-wrap">
+                                                        <p>${u.getAddress()}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="event-wrap">
+                                                        <p>${u.getLatitude()}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="event-wrap">
+                                                        <p>${u.getLongitude()}</p>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="r-no"><span>${u.toRegdateString()}</span></div>
-                                                </td>
-                                                <td class="btn-layout">
-                                                    <div class="primary-btn">
-                                                        <a class="btn btn-dark" href="editpost/${u.getSeq()}">수정하기</a>
-                                                    </div>
-                                                </td>
-                                                <td class="btn-layout">
-                                                    <div class="primary-btn">
-                                                        <a class="btn btn-dark"
-                                                            href="javascript:delete_ok('${u.getSeq()}')">삭제하기</a>
-                                                    </div>
                                                 </td>
                                             </tr>
                                         </c:forEach>
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                        <div class="primary-btn text-center mb-3">
-                            <a href="add" class="btn btn-dark">새 금융기관 등록하기</a>
                         </div>
                     </div>
                 </div>
@@ -340,7 +343,7 @@
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
         <li class="nav-item"><a href="javascript:gotoTop()" class="nav-link px-2 text-muted">Header</a></li>
         <li class="nav-item"><a href="https://github.com/alsco1234/PP_Final" class="nav-link px-2 text-muted">Github</a></li>
-        <li class="nav-item"><a href="../login/logout" class="nav-link px-2 text-muted">Logout</a></li>
+        <li class="nav-item"><a href="../../login/login" class="nav-link px-2 text-muted">Login</a></li>
       </ul>
       <p class="text-center text-muted">© 2021 실전프로젝트1 기말 과제</p>
     </footer>
@@ -348,11 +351,6 @@
     	<i class="fa fa-chevron-down fa-2x"></i>
     </button>
     <script>
-        function delete_ok(id) {
-            var a = confirm("정말로 삭제하겠습니까?");
-            if (a) location.href = 'delete/' + id;
-        }
-        
         function changeInputPlaceholder() {
         	var selectedOption = $('#searchSelect option:checked').text();
         	if(selectedOption !== '내 위치') {

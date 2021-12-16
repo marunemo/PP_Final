@@ -8,6 +8,7 @@
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <!-- ref: https://mdbootstrap.com/docs/standard/extended/login/#:~:text=EDIT%20IN%20SANDBOX-,Login%20form%20%236,-LOGIN -->
 <style>
 	.gradient-custom {
@@ -37,12 +38,15 @@
 	              <div class="form-outline form-white mb-4">
 	                <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="비밀번호" />
 	              </div>
+	              
 	              <button class="btn btn-outline-light btn-lg px-5" type="submit">로그인</button>
 	            </form>
 	            <div>
 	              <p class="mb-0">
 	              	계정이 없나요?
-	              	<a href="javascript:alert('사실 그런거 없음 ㅎ')" class="text-white-50 fw-bold">관리자에게 문의</a>
+	              	<a href="../guest/store/list" class="text-white-50 fw-bold">
+	              	  <u><i class="fa fa-user-circle px-1"></i></u>게스트 로그인
+	              	</a>
              	  </p>
 	            </div>
 	

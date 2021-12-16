@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>판매점 정보</title>
+    <title>가맹점 정보</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -235,7 +235,7 @@
         <div>
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
 		    <div class="container">
-		      <h2 class="navbar-brand  mb-lg-0">판매점 정보</h2>
+		      <h2 class="navbar-brand  mb-lg-0">가맹점 정보</h2>
 		      <div class="collapse navbar-collapse" id="navbarsExample07">
 		        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		          <li class="nav-item">
@@ -248,14 +248,16 @@
 		            <a class="nav-link" href="../franchisee/list">가맹점</a>
 		          </li>
 		          <li class="nav-item">
-		            <a class="nav-link" href="../login/logout">로그아웃</a>
+		            <a class="nav-link" href="../../login/login">로그인</a>
 		          </li>
 		        </ul>
 		        <form action="list" class="input-group w-50">
 	        	  <div class="input-group-prepend">
 				    <select class="form-select rounded-0" id="searchSelect" name="column" onchange="changeInputPlaceholder()">
-				      <option value="belong" selected>금융기관명</option>
-				      <option value="name">판매 및 환전처명</option>
+				      <option value="name" selected>업체명</option>
+				      <option value="callnum">연락처</option>
+				      <option value="category">업태</option>
+				      <option value="admin">행정동</option>
 				      <option value="address">주소</option>
 				      <option value="position">내 위치</option>
 				    </select>
@@ -277,10 +279,14 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center" scope="col">Id</th>
-                                            <th class="text-center" scope="col">금융기관</th>
-                                            <th class="text-center" scope="col">금융기관</th>
+                                            <th class="text-center" scope="col">가맹점</th>
+                                            <th class="text-center" scope="col">업체명</th>
+                                            <th class="text-center" scope="col">연락처</th>
+                                            <th class="text-center" scope="col">업태</th>
+                                            <th class="text-center" scope="col">행정동</th>
+                                            <th class="text-center" scope="col">주소</th>
+                                            <th class="text-center" colspan="2" scope="col">위도, 경도</th>
                                             <th class="text-center" scope="col">수정일</th>
-                                            <th class="text-center" scope="col" colspan="2">수정 및 삭제</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -289,7 +295,7 @@
                                                 <th scope="row">
                                                     <div class="event-date">
                                                         <span>${u.getSeq()}</span>
-                                                        <p>판매점</p>
+                                                        <p>가맹점</p>
                                                     </div>
                                                 </th>
                                                 <td>
@@ -299,36 +305,47 @@
                                                 </td>
                                                 <td>
                                                     <div class="event-wrap px-3">
-                                                        <h3><p>${u.getBelong()}</p></h3>
-                                                        <div class="meta">
-                                                            <p>${u.getName()}</p>
-                                                            <p>${u.getAddress()}</p>
-                                                            <p>${u.getLatitude()}, ${u.getLongitude()}</p>
-                                                        </div>
+                                                        <p>${u.getName()}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="event-wrap px-3">
+                                                        <p>${u.getCallnum()}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="event-wrap px-3">
+                                                        <p>${u.getCategory()}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="event-wrap px-3">
+                                                        <p>${u.getAdmin()}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="event-wrap px-3">
+                                                        <p>${u.getAddress()}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="event-wrap px-3">
+                                                        <p>${u.getLatitude()}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="event-wrap px-3">
+                                                        <p>${u.getLongitude()}</p>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="r-no"><span>${u.toRegdateString()}</span></div>
-                                                </td>
-                                                <td class="btn-layout">
-                                                    <div class="primary-btn">
-                                                        <a class="btn btn-dark" href="editpost/${u.getSeq()}">수정하기</a>
-                                                    </div>
-                                                </td>
-                                                <td class="btn-layout">
-                                                    <div class="primary-btn">
-                                                        <a class="btn btn-dark"
-                                                            href="javascript:delete_ok('${u.getSeq()}')">삭제하기</a>
-                                                    </div>
                                                 </td>
                                             </tr>
                                         </c:forEach>
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                        <div class="primary-btn text-center mb-3">
-                            <a href="add" class="btn btn-dark">새 금융기관 등록하기</a>
                         </div>
                     </div>
                 </div>
@@ -340,7 +357,7 @@
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
         <li class="nav-item"><a href="javascript:gotoTop()" class="nav-link px-2 text-muted">Header</a></li>
         <li class="nav-item"><a href="https://github.com/alsco1234/PP_Final" class="nav-link px-2 text-muted">Github</a></li>
-        <li class="nav-item"><a href="../login/logout" class="nav-link px-2 text-muted">Logout</a></li>
+        <li class="nav-item"><a href="../../login/login" class="nav-link px-2 text-muted">Login</a></li>
       </ul>
       <p class="text-center text-muted">© 2021 실전프로젝트1 기말 과제</p>
     </footer>
@@ -348,11 +365,6 @@
     	<i class="fa fa-chevron-down fa-2x"></i>
     </button>
     <script>
-        function delete_ok(id) {
-            var a = confirm("정말로 삭제하겠습니까?");
-            if (a) location.href = 'delete/' + id;
-        }
-        
         function changeInputPlaceholder() {
         	var selectedOption = $('#searchSelect option:checked').text();
         	if(selectedOption !== '내 위치') {

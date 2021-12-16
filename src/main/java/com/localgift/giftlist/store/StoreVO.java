@@ -1,5 +1,6 @@
 package com.localgift.giftlist.store;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class StoreVO {
@@ -59,5 +60,10 @@ public class StoreVO {
 	}
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
+	}
+	
+	public String toRegdateString() {
+		SimpleDateFormat pattern = new SimpleDateFormat("yyyy년 MM월 dd일 a hh:mm:ss");
+		return pattern.format(this.regdate);
 	}
 }

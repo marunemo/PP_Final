@@ -66,4 +66,19 @@ public class FranchiseeController {
 		return "redirect:/franchisee/list";
 	}
 	
+	@RequestMapping(value = "/guest/franchisee/list", method = RequestMethod.GET)
+	public String guestFranchiseelist(Model model, HttpServletRequest request) {
+		String column = request.getParameter("column");
+		String keyword = request.getParameter("keyword");
+		if(column == null || keyword == null)
+			model.addAttribute("list", franchiseeService.getFranchiseeList());
+		else if(column.equals("position")) {
+			String[] ll = keyword.split(", ");
+			model.addAttribute("list", franchiseeService.lookoutFranchiseeList(ll[0], ll[1]));
+		}
+		else
+			model.addAttribute("list", franchiseeService.searchFranchiseeList(column, keyword));
+		return "guest/fposts";
+	}
+	
 }
