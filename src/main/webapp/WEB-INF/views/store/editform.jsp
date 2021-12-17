@@ -187,6 +187,7 @@
                         <h3>금융기관 수정하기</h3>
                         <p>다음 항목들을 수정해주세요.</p>
                         <form action="../editok" method="post" class="requires-validation" novalidate>
+                        	<input type="hidden" name="seq" value="<%= u.getSeq() %>" />
 
                             <div class="col-md-12">
                                 <input class="form-control" type="text" name="belong" placeholder="금융기관명" value="<%= u.getBelong() %>" required>

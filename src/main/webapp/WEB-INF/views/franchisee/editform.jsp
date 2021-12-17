@@ -187,6 +187,7 @@
                         <h3>가맹점 수정하기</h3>
                         <p>다음 항목들을 수정해주세요.</p>
                         <form action="../editok" method="post" class="requires-validation" novalidate>
+                        	<input type="hidden" name="seq" value="<%= u.getSeq() %>" />
 
                             <div class="col-md-12">
                                 <input class="form-control" type="text" name="name" placeholder="업체명" required>
